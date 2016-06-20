@@ -15,16 +15,85 @@ body{
 
 <pre>
 
-Goal:
+References:
+[1] To get an understanding of latest OS features check 
+    OS X El Capitan <a href="https://www.apple.com/osx/all-features/pdf/osx_elcapitan_core_technologies_overview.pdf">Core Technologies Overview</a>
+[2] Check out the work of <a href="heros.html">these people</a>
 
-Write a basic download manager.
-Write a basic bit torrent.
-Write Play/Pause music player.
+
+Goals:
+- Write a basic download manager.
+- Write a basic bit torrent App.
+
+// you can implement in any language other than C-language
+
+<h3>#1: Write a basic download manager</h3>
+Given one of the sample URL's as input. The download manager should
+- Use HEAD command of HTTP to get the meta-data (response-header) of the remote file
+- Get the length of the file using value of "Content-Length" key in response-header
+- start 4 threads and 
+- simultaniously download the file as 4 parts and
+- join the parts and 
+- save in a file
 
 
-OS X El Capitan <a href="https://www.apple.com/osx/all-features/pdf/osx_elcapitan_core_technologies_overview.pdf">Core Technologies Overview</a>
 
-Check out the work of <a href="heros.html">these people</a>
+The HTTP HEAD method asks for a response identical to that of a GET request, but without the
+response body. This is useful for retrieving meta-information written in response
+headers, without having to transport the entire content.
+
+From the response headers, value of the "Content-Length" key will give you the length of
+the remote file in bytes.
+
+Sample URLs:
+http://rohinibarla.github.io/heros/00DougEngelbart.jpg
+http://rohinibarla.github.io/heros/01AlanKay.jpg
+http://rohinibarla.github.io/heros/03ChrisLattner.jpg
+http://rohinibarla.github.io/heros/04MartinFowler.jpg
+http://rohinibarla.github.io/heros/05JoeEdelman.jpg
+http://rohinibarla.github.io/heros/10BretVictorHelping.jpg
+https://www.apple.com/osx/all-features/pdf/osx_elcapitan_core_technologies_overview.pdf
+
+
+
+<h3>#2: Write a basic bit torrent Application</h3>
+<b>Central Server must support APIs to:</b>
+- register as peer
+- get list of peers
+
+
+<b>Bit torrent has both client and server components executing in the same process:</b>
+// When executing bit torrent, the central server IP address is given as argument
+
+server component must support APIs like
+- get list of available parts // each part is fixed size of 64KB
+- get N'th part of the file
+
+client component must perform the following tasks
+- register with the central server
+- get the list of peers
+- connect to each peer in a seperate thread
+    - get the list of parts available with peer
+    - download each part if not available
+- Once all the part are available, "Download completed" message is printed
+
+
+Both the server component and client component share 
+- the meta-data regarding details of the parts that are available and 
+- partial or full content of the file.
+
+
+To test 
+- start the central server on a machine (say M1).
+- start 2 bit torrents on 2 machines 
+(with IP address of M1, -have [ firsthalf | secondhalf ], -filepath "filepath")
+These 2 machines, one will have the first part, the second one will have the second
+part of the file. // the way you acheive this is by providing a file path (file that
+is being replicated) and special parameter to specify which part is available
+(e.g: -have firsthalf; -have secondhalf)
+- Start bit torrent on 2 more machines (with IP address of M1 as input)
+- After some time all the 4 machines must have the complete file.
+
 
 
 For doubts you can <a href="mailto:rohini.kumar@gmail.com">email me</a>.
