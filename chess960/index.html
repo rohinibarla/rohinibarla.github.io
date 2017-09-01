@@ -10,10 +10,6 @@
     <body onload="init()">
 
 	<center style="margin-top: 100px">
-	<form onSubmit="getGameWithId(event)">
-		<input type="text" id="chess960id" placeholder="Enter Chess 960 Id" autofocus>
-		<input type="submit"> 
-	</form>
 	<p id="chessGamePlay">
 	<div class="cbdiagram"
 	data-size="800"
@@ -22,6 +18,11 @@
 	data-title="Mine Finally">
 	</div>
 	</p>
+
+	<form onSubmit="getGameWithId(event)">
+		<input type="text" id="chess960id" placeholder="Enter Chess 960 Id" autofocus>
+		<input type="submit"> 
+	</form>
 
 	</center>
     </body>
