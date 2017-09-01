@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+	<title>Chess 960 loader and player</title>
+	<link rel="stylesheet" type="text/css" href="https://pgn.chessbase.com/CBReplay.css"/>
+	<script src="https://pgn.chessbase.com/jquery-3.0.0.min.js"></script>
+	<script src="https://pgn.chessbase.com/cbreplay.js" type="text/javascript"></script>
+        <script type="text/javascript" src="selectboard.js"></script>
+    </head>
+    <body onload="init()">
+
+	<center style="margin-top: 100px">
+	<form onSubmit="getGameWithId(event)">
+		<input type="text" id="chess960id" placeholder="Enter Chess 960 Id" autofocus>
+		<input type="submit"> 
+	</form>
+	<p id="chessGamePlay">
+	<div class="cbdiagram"
+	data-size="800"
+	data-fen="bbqnnrkr/pppppppp/8/8/8/8/PPPPPPPP/BBQNNRKR w - - 0 1"
+	data-legend="960 Moves."
+	data-title="Mine Finally">
+	</div>
+	</p>
+
+	</center>
+    </body>
+</html>
