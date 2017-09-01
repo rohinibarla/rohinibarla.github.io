@@ -8,7 +8,7 @@ function init() {
 
 function getGameWithId(event) {
     
-    //event.preventDefault()
+    event.preventDefault()
     
     // read the board id, and clear it from UI
     var boardId = document.getElementById("chess960id").value
@@ -22,8 +22,9 @@ function getGameWithId(event) {
         // update details
         details = detailsOfChessBoard(position)
     }
+    $('.cbdiagram').attr('data-fen', list[position].fen);
 
-    document.getElementById("chessGamePlay").innerHTML = details
+    //document.getElementById("chessGamePlay").innerHTML = details
 }
 
 function loadDataAndParse(fileName) {
