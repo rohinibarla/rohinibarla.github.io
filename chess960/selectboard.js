@@ -3,7 +3,9 @@ var list
 // The initial method called on page load
 function init() {
     // load details from data file
-    loadDataAndParse('Chess960BoardStates.json')
+    loadDataAndParse('Chess960BoardStates.json');
+    loadBoard();
+    // window.alert('loaded');
 }
 
 function getGameWithId(event) {
@@ -14,7 +16,7 @@ function getGameWithId(event) {
     var boardId = document.getElementById("chess960id").value
     document.getElementById("chess960id").value = ''
     
-    var details = "Not Found" 
+    var details;// = "Not Found" 
 
     var position = findWithBoardId(boardId)
     if (position != -1) {
@@ -22,9 +24,11 @@ function getGameWithId(event) {
         // update details
         details = detailsOfChessBoard(position)
     }
-    $('.cbdiagram').attr('data-fen', list[position].fen);
+    //$('.cbdiagram').attr('data-fen', list[position].fen);
 
-    //document.getElementById("chessGamePlay").innerHTML = details
+    document.getElementById("chessGamePlay").innerHTML = details;
+    loadBoard();
+
 }
 
 function loadDataAndParse(fileName) {
@@ -69,11 +73,11 @@ function findWithBoardId(boardId) {
 }
 
 function detailsOfChessBoard(index) {
-   var details = '<div class="cbdiagram" data-size="800" data-fen="'
-   details += list[index].fen
-   details += '" data-legend="960 Moves."'
-   details += ' data-title="Mine Finally">'
-   details += '</div>'
-    
+   var details = '<div class="cbdiagram" data-size="800" data-fen="';
+   details += list[index].fen;
+   details += '" data-legend="960 Moves."';
+   details += ' data-title="Mine Finally">';
+   details += '</div>';
+   
    return details
 }
