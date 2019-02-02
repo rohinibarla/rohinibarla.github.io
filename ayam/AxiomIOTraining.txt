@@ -118,3 +118,38 @@ At any point of time, there must be only 1 unknown.
 So a list of all the unknows will give insight into what we are try to make the student think and get comfortable with.
 
 
+Tasks:
+------
+Algorithm principles & 5 languages
+C language
+Fundamentals of computing
+OOPs concepts and programs
+Higher order functions
+Collections & DS
+
+Blogging
+Video review
+
+Algorithms in mathematics (GCD, prime)
+
+Website for themselves
+
+CLI
+
+CodeHS
+
+Parrots training
+
+
+Resources:
+----------
+Crash course on computer science
+launch school
+git and github (CLI)
+How to use your brains tedx
+Mathigon
+
+Weekly 3 times.
+
+quickly complete a task.
+
