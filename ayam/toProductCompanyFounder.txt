@@ -1,0 +1,50 @@
+Dear <Product-Company-Founder>,
+
+As you know it's very hard to find good product engineers in software domain.
+
+In short we want to solve this problem, by putting all our efforts at the right time.
+
+In detail, the current model of learning is oriented towards 'how to pass the interview with least effort just few months before the interview'. The interview is just a point of reference for asserting the capability of developing a software. 
+
+We want to make them capable in programming and developing software starting in the 1st year of B.Tech itself. We strongly beleive that if the necessary fundamentals of programming is taught to the students, in the first year itself. He will be a great software engineer by the end of B.Tech.
+
+I have worked in Software product companies for 12 years. I have produced few software developers, who can learn any new technology that is going to come in the future. I know what are the needed capabilities for a person to become a good software developer. Some of them are listed bellow.
+
+Capabilities
+------------
+- Implement new functionality
+- Write industry standard code
+	- Error handling
+	- Resource management
+	- Unit and Functional tests
+	- Scripts and tools to test quickly
+- Code review
+- Debug issue
+- Fix issues and communicate
+- Develop module
+- Choose and use best libraries
+- Build Apps from scratch
+- Draw data flow picture
+- Draw execution flow picture
+- Draw components of entire product
+- Write product design document
+- Write estimates of each sub-tasks and plan deliverables
+- Work planning and listing out assumptions & dependencies
+- In a selected stack
+	- languages
+	- techologies
+	- frameworks
+	- tools	
+	- common patterns used
+	- core principles of the stack
+- Forsee problems in the current codebase
+- Show better ways of acheiving same result
+- Refactoring code
+
+- Proactive communication
+- Learning on the go
+- Joyful mind
+
+
+We firmly believe to make student capable of developing software we must start in the first year.
+
