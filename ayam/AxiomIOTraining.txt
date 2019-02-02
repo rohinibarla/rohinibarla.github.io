@@ -1,0 +1,120 @@
+AxiomIO Training process
+------------------------
+
+
+End goals for the training.
+---------------------------
+
+Capabilities
+- Implement new functionality
+- Write industry standard code
+	- Error handling
+	- Resource management
+	- Unit and Functional tests
+	- Scripts and tools to test quickly
+- Code review
+- Debug issue
+- Fix issues and communicate
+- Develop module
+- Choose and use best libraries
+- Build Apps from scratch
+- Draw data flow picture
+- Draw execution flow picture
+- Draw components of entire product
+- Write product design document
+- Write estimates of each sub-tasks and plan deliverables
+- Work planning and listing out assumptions & dependencies
+- In a selected stack
+	- languages
+	- techologies
+	- frameworks
+	- tools	
+	- common patterns used
+	- core principles of the stack
+- Forsee problems in the current codebase
+- Show better ways of acheiving same result
+- Refactoring code
+
+- Proactive communication
+- Learning on the go
+
+
+
+
+
+
+Planning for acheiving the above goals
+--------------------------------------
+
+Activities & Concepts & Principles
+- Algorithms & six principles
+- Writing in 5 programming languages
+	- language: input output, arrays, single function.
+	- coding style
+- CodeHS puzzles for 
+	- Functions
+	- Top down design
+	- Indentation
+- Fundamentals of computing
+- Parrots training, take your learning into your hands
+- Command line interface using codenvy.io or VM
+- Git and Github
+- Write 3 programs from each language and commit to github using codenvy.io
+- Blogging using Evernote & Postach.io & Grammerly
+- Using your brains & learn how to learn
+- Protyping user interface
+- Brain Storming method and PMI tool
+- Touch Typing
+- Fundamental Of Computing slides
+- Build 2 Applications
+
+
+Activities with details
+-----------------------
+
+Algorithms and Principles
+- Start in new left page, dry run on right page.
+- Do dry-run for every algorithm that you write.
+- Write down what is wrong in each incorrect algorithm.
+
+Principles with less number of words:
+End User Experience, Readability, Correctness, Multiple Solutions, Nested loops, No Duplicate code, Optimization, Collections.
+
+Should we tell the principle and make them write, or just orally say them?
+Which is better?
+
+
+
+Implement algorithms in different languages
+- Keep a notes of all the material that you have reffered, e.g. the websites or blog post that you have read.
+- Keep saving the compiler error messages that you get in the process. Which are important to learn the vocabulary of compilers. This will help in working in new languages quickly.
+- Review first 3 programs. Next 10 programs, and the remaining.
+
+Writing regularly
+- Create account in Evernote and move your notes in it.
+- Create blog using postach.io, And Connect to one notebook in Evernote.
+- Keep writing one blog post daily.
+- Use grammerly to fix mistakes in your blog post.
+- Note: This must be started after they complete implementation in 2 langauges.
+
+
+Single guideline for work and life
+----------------------------------
+If you do everything like 
+it is the last and only thing
+you are going to do in your life, 
+if you do everything as if 
+your very life depends on it, 
+you don’t have to do 
+anything in particular.
+
+
+
+Learning will simply happen because all that it needs is a conducive atmosphere. 
+
+
+Note:
+At any point of time, there must be only 1 unknown.
+So a list of all the unknows will give insight into what we are try to make the student think and get comfortable with.
+
+
