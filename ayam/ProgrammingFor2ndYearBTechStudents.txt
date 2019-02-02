@@ -1,0 +1,127 @@
+
+Programming for 2nd year students.
+
+Start with presentation.
+
+On the capability of programming curve.
+
+We need to figure out where you are.
+
+Where ever you are you can start from their and reach the goal.
+The amount of effort varies depending on where you are on the path.
+
+Offer includes:
+We support them for 21 days. We will help them in learning to solve any questions in programming.
+We will have 3 live session weekly once.
+We will create a WhatsApp group, to give useful information on regular basis.
+You can subscribe if needed. 
+You can ask questions related to programming.
+
+Day#1:
+30 mins questions to assess their understanding of coding.
+Make them realize what they don't know.
+
+.print statement for SMS
+.maths question
+.loop mystery
+.return mystery
+.recursive mystery
+.dynamic memory questions
+// more questions from IIPE Question paper
+.Write program to find sum of most significant digits of given 2 numbers.
+. Write a function to find the number of nodes of a given binary tree.
+. Write a function to find the number leaf nodes of a given binary tree.
+
+One group, quick walk-through of important concepts.
+
+Second group, covering the fundamentals.
+Systems must be ready with Sublime editor and GCC/Clang Compiler and git and make commands.
+
+Codenvy.io or local machine, with necessary setup
+Is there any option to create an Image, which they could use?
+Stack machine will provide the necessary choice.
+
+
+
+
+
+
+For the tasks.
+Core concepts from mathematics needed for programming.
+- collect questions asked in programming round by TCS, Wipro, Infosys... etc and 
+find out the relavent mathematics.
+
+
+List of questions from SPOJ.
+
+
+Answer the questions correctly, otherwise complete corresponding module and then take the test again.
+
+
+
+
+The Art of Programming
+Competitive programming
+Applied Computer Science
+
+Must be able to write programs, which is 
+- Readable
+- Modular
+- Memory used appropriately
+
+Problems on 
+- mathematical questions
+- strings
+
+Fundamentals of computing.
+
+Follow up online material for them.
+
+Using Unit-1, create a track about function in C.
+passing different type of values.
+Also explain about the scope of the variables.
+
+Think of how we both can do, here collectively.
+
+Plan what people will do here in that week in Training for AxiomIO.
+Next week focus on training them on C programming.
+
+Akil of both and Sandeep and Vinay.
+
+
+The 7 principles.
+
+Make sure your code covers all the different types of input in the code.
+// correctness of the program
+
+Try to write the code as modular as possible. Divide your code into functions and try to avoid writing the entire function in the main function. Ideally, the main function should contain only reading the input and displaying the output.
+// modular
+
+Name variables clearly to state their purpose.
+// readable
+
+Avoid using in-built library function for strings, instead write your own logic for them.
+// write your own logic for strings
+
+Avoid declaring arrays of arbitrary sizes, instead use malloc/calloc/realloc for the same.
+// dynamic memory as needed
+
+For any given problem try to find out all the solutions.
+// multiple solutions
+
+Try to improve on your code by going back again and again to the same problem. 
+// iterations
+
+It is but common that we will not arrive at the best solution in the first pass.
+// optimized
+
+
+
+"The Art of Programming" Workshop
+By Rohini Kumar & Surya Chandra
+
+
+
+End user experience
+Readability
+
