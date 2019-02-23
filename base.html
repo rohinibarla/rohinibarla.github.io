@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Tangle document</title>
+
+<style type="text/css">
+body{
+        width: 75%;
+        max-width: 640px;
+        margin: 20%;
+    font-size:36px;
+    font-family:monospace;
+}
+</style> 
+
+    <!-- Tangle -->
+    <script type="text/javascript" src="Tangle.js"></script>
+
+    <!-- TangleKit (optional) -->
+    <link rel="stylesheet" href="TangleKit/TangleKit.css" type="text/css">
+    <script type="text/javascript" src="TangleKit/mootools.js"></script>
+    <script type="text/javascript" src="TangleKit/sprintf.js"></script>
+    <script type="text/javascript" src="TangleKit/BVTouchable.js"></script>
+    <script type="text/javascript" src="TangleKit/TangleKit.js"></script>
+
+    <!-- example -->
+    <script type="text/javascript">
+
+        function setUpTangle () {
+            
+            var element = document.getElementById("baseN");
+            
+            var tangle = new Tangle(element, {
+                initialize: function () {
+                    this.number = 1024;
+                    this.base = 2;
+                },
+                update: function () {
+                    this.baseNNumber = (this.number).toString(this.base);
+                }
+            });
+        }
+    
+    </script>
+    
+    
+</head>
+
+<body onload="setUpTangle();">
+
+    <p> </p>
+
+    <p style="font-size:36px;" id="baseN">
+    	The number <span data-var="number" class="TKAdjustableNumber" data-min="0" data-max="5000"></span>
+	<br>
+	in base <span data-var="base" class="TKAdjustableNumber" data-min="2" data-max="36"></span> is 
+	<br>
+	<span data-var="baseNNumber"></span>.
+    </p>
+
+    
+</body>
+</html>
