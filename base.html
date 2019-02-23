@@ -40,6 +40,19 @@ body{
                     this.baseNNumber = (this.number).toString(this.base);
                 }
             });
+
+
+            var element_field = document.getElementById("base_field");
+            
+            var tangle_field = new Tangle(element_field, {
+                initialize: function () {
+                    this.number_field = 64;
+                    this.base_field = 2;
+                },
+                update: function () {
+                    this.baseNNumber_field = (this.number_field).toString(this.base_field);
+                }
+            });
         }
     
     </script>
@@ -60,5 +73,12 @@ body{
     </p>
 
     
+    <p style="font-size:36px;" id="base_field">
+    	The number <span data-var="number_field" class="TKNumberField"</span>
+	<br>
+	in base <span data-var="base_field" class="TKAdjustableNumber" data-min="2" data-max="36"></span> is 
+	<br>
+	<span data-var="baseNNumber_field"></span>.
+    </p>
 </body>
 </html>
