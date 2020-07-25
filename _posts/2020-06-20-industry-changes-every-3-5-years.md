@@ -4,7 +4,7 @@ title: "Industry changes every 3-5 years"
 date: 2020-06-20 18:20
 comments: false
 categories:
-draft: true
+draft: false
 ---
 
 Software industry changes are different at different times. You will see some marked changes in the industry when you look back for the past few decades. Now it’s the year 2020. Now the recent change in the industry is Machine Learning has picked up and many things are getting automated. Many of the companies are looking for AI and ML capable people. For ML, the popular language is Python.
