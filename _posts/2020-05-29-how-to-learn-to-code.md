@@ -4,6 +4,7 @@ title: "How to learn to code?"
 date: 2020-05-29 18:20
 comments: false
 categories:
+draft: false
 ---
 
 The environment that we are in today, where every type of knowledge is available on the internet. When you want to solve a problem and write code. The moment you type the question, most of the time, 95% of the time, you get the code with different solutions in most of the popular languages. That too as the first result and answer in the right side box, showing you the code.
