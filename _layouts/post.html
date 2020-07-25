@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+{% if page.draft %}
+<div class="draft">This post has not been published yet.</div>
+{% endif %}
+
+<h2>{{ page.title }}</h2>
+<p class="meta" data-location="{{ page.location }}">
+  Written on {{ page.date | date: "%B %d, %Y" }} {% if page.update %} &amp; updated on
+  <span class="update">{{ page.update | date: "%B %d, %Y" }}</span>. {% endif %} {% if page.editors %}
+  <br />
+  <span class="editors">
+    Edited by {% for editors_hash in page.editors %} {% for editor in editors_hash %}
+    <a href="{{ editor[1] }}">{{ editor[0] }}</a>
+    {% endfor %} {% endfor %}
+  </span>
+  {% endif %} {% if page.reviewers %}
+  <br />
+  <span class="reviewers">
+    Reviewed by {% for reviewers_hash in page.reviewers %} {% for reviewer in reviewers_hash %}
+    <a href="{{ reviewer[1] }}">{{ reviewer[0] }}</a>
+    {% endfor %} {% endfor %}
+  </span>
+  {% endif %}
+</p>
+
+<!-- From: https://carlosbecker.com/posts/jekyll-reading-time-without-plugins/ -->
+<span class="reading-time" title="Assuming a 180 word per minute average reading speed">
+  {% assign words = content | number_of_words %} {% if words < 360 %} 1 min. {% else %} {{ words | divided_by:180 }}
+  min. {% endif %} read
+</span>
+
+<div class="post">
+  {{ content }}
+</div>
+<!-- <aside class="subscribe">
+  <p>Enjoyed this post? <a href="https://feed.rohinibarla.com">Subscribe</a> to hear when new ones are posted.</p>
+</aside> -->

@@ -1,0 +1,19 @@
+---
+permalink: manifest.json
+---
+
+{
+  "lang": "{{ site.manifest.lang }}",
+  "background_color": "#{{ site.manifest.background_color }}",
+  "name": "{{ site.manifest.name }}",
+  "short_name": "{{ site.manifest.short_name }}",
+  "display": "{{ site.manifest.display}}",
+  "icons": [
+    {
+      "src": "assets/icon-300x300.png",
+      "sizes": "300x300",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "{{ site.url }}"
+}

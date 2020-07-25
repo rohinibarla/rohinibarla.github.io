@@ -1,0 +1,43 @@
+figure.code
+  margin: 0 1em
+  padding: 0
+
+.highlight
+  font-size: 0.9em
+  font-family: "SourceCodePro-Regular", Monaco, "Courier New", monospace
+  border-radius: 5px
+  overflow: scroll
+  margin: 1em 0
+  padding: 0
+
+  pre
+    code
+      display: inline-table
+      border: none
+    &.terminal
+      border: 1px solid #000
+      background-color: $grey
+      color: $white
+      code
+        background-color: $grey
+
+  table
+    border-spacing: 0
+
+  .rouge-code
+    padding: 1em 0.7em 1em
+  .rouge-code, pre
+    margin: 0
+
+  .rouge-gutter
+    background-color: lighten(desaturate(#002b36, 10%), 5%)
+    padding-left: 0.7em
+    padding-right: 0.6em
+    text-align: right
+    white-space: initial
+
+.lines.highlight
+  width: 100%
+
+.gist .k
+  color: #F8F8F2 !important

@@ -1,0 +1,65 @@
+name: Rohini Kumar Barla
+subtitle: Education Engineer
+url: https://rohinibarla.com
+description: "Thoughts on software, programming, and life."
+permalink: /posts/:title/
+highlighter: rouge
+# Rouge Highlighter in Kramdown › http://kramdown.gettalong.org/syntax_highlighter/rouge.html
+# span, block element options fall back to global
+# https://github.com/jekyll/jekyll/issues/4619#issuecomment-191267346
+kramdown:
+  auto_ids: true
+  input: GFM
+  # https://github.com/jekyll/jekyll/pull/4090
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: "highlight"
+    #line_numbers: true # bad idea, spans don't need linenos and would inherit this option
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+markdown: kramdown
+redcarpet:
+  extensions:
+    - no_intra_emphasis
+    - fenced_code_blocks
+    - autolink
+    - strikethrough
+    - superscript
+    - with_toc_data
+    - lax_spacing
+    - lax_html_blocks
+    - tables
+    - footnotes
+    - with_toc_data
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - deploy.thor
+
+sass:
+  style: :nested
+  sass_dir: _sass
+
+jekyll_tidy:
+  exclude: []
+  compress_html: false
+  # ignore_env: development
+
+plugins:
+  - jekyll-gist
+  - jekyll-redirect-from
+  - pry
+  - jekyll-haml
+
+manifest:
+  name: Rohini Kumar Barla
+  short_name: Rohini
+  lang: en
+  background_color: #ffffff
+  display: standalone
