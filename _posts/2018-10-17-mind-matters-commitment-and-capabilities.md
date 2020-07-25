@@ -4,7 +4,7 @@ title: "Mind matters, commitment and capabilities"
 date: 2018-10-17 18:20
 comments: false
 categories:
-draft: true
+draft: false
 ---
 
 **Read this when you want to complete the task but you are stuck.**
