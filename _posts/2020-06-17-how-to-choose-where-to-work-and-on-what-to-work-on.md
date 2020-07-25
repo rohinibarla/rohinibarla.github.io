@@ -4,7 +4,7 @@ title: "How to choose where to work and on what to work on?"
 date: 2020-06-17 18:20
 comments: false
 categories:
-draft: true
+draft: false
 ---
 
 When you are in college, as you do well in the subjects. As you become good at coding, you look at your college final year batch and see which companies they are selected. Based on this majority of students set their goal to work in a company.

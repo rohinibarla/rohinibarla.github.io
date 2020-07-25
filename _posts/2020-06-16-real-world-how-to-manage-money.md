@@ -4,7 +4,7 @@ title: "Real-world how to manage money"
 date: 2020-06-16 18:20
 comments: false
 categories:
-draft: true
+draft: false
 ---
 
 Money. When I was a child, my parents, relatives and well-wishers, I have heard this sentence multiple times. Sometimes they are addressing me or they are saying to someone who is studying. It is. **Study well, you will get a good job**.

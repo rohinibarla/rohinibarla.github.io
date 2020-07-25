@@ -4,7 +4,7 @@ title: "Loyalty to the company?"
 date: 2020-06-19 18:20
 comments: false
 categories:
-draft: true
+draft: false
 ---
 
 There used to be a saying in the olden days. You have to be loyal to the company. Loyalty means constant support to an institution.

@@ -4,7 +4,7 @@ title: "Learning starts now and its life long"
 date: 2020-06-20 18:20
 comments: false
 categories:
-draft: true
+draft: false
 ---
 
 You might think… now that I am about complete B.Tech, once I complete, I don’t need to study further. I have been studying from L.K.G to B.Tech, so now I can rest and just do the work.

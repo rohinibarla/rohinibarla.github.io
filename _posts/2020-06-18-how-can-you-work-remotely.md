@@ -4,7 +4,7 @@ title: "How can you work remotely?"
 date: 2020-06-18 18:20
 comments: false
 categories:
-draft: true
+draft: false
 ---
 
 The ability to work remotely is a boon for a software developer. The industry provides this option.
