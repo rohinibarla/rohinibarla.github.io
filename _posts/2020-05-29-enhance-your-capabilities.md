@@ -7,12 +7,10 @@ categories:
 draft: false
 ---
 
-> “If you want to be successful,
-> don’t seek success –
->
-> seek competence, empowerment;
->
-> do nothing short of
+> “If you want to be successful,  
+> don’t seek success –  
+> seek competence, empowerment;  
+> do nothing short of  
 > the best that you can do.”
 >
 > a wise man

@@ -7,9 +7,7 @@ categories:
 draft: false
 ---
 
-### Working in teams to create some useful software.
-
-When you are into computer science engineering. It is important to work in teams to participate in a coding competition. It is very important to identify a practical problem and write software to solve it.
+Working in teams to create some useful software. When you are into computer science engineering. It is important to work in teams to participate in a coding competition. It is very important to identify a practical problem and write software to solve it.
 
 For example, in IIIT Hyd college in summer there is a lot of time to play and there are a lot of people interested in playing cricket. For everyone to get a good chance. They created the software. In which the booking option opens at noon. If you have played the last two days, you will not be allowed to book. Otherwise, whoever comes first will book and play that day. It’s simple, but it gives a kick when you create software for yourself and use it.
 

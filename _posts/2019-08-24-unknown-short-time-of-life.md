@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "unknown short time of life"
+title: "Unknown short time of life"
 date: 2019-08-24 18:20
 comments: false
 categories:
