@@ -9,7 +9,7 @@ draft: false
 
 **Read this when you want to complete the task but you are stuck.**
 
-### How to make your mind do what you want?
+# How to make your mind do what you want?
 
 Mind is an interesting thing, if you don't set the direction, it will pull you in all directions. From childhood till now, mind has been trained to come up with reasons. For e.g. When your parents/teachers ask why were you late today? You are skilful in coming up with 10 to 20 reasons, which all looks real for any logical person. You have been practicing this art. So the mind has become master in deceiving so gently with logical reasons in any given situation. The problem is when you don't set the direction, the mind plays the same tricks against you. The easiest person to fool is yourself. You will do all things logically, but you go no where with such a mind. Once this super capable mind starts working against you, there is no other enemy stronger than him. You are finished.
 
@@ -38,7 +38,7 @@ So commit to what ever you want to do. And once you commit, stop listening to yo
 
 You can start with a smaller commitments like. I am committed to finish this lesson, or this assignment. You commit like Pokiri.
 
-### When you are stuck, it means you have something to learn
+# When you are stuck, it means you have something to learn
 
 When are stuck at a problem, obviously it means their is something you don’t know. It’s an opportunity to learn by solving it.
 
@@ -48,7 +48,7 @@ When you are stuck at problem, there are many students like you who are stuck, j
 
 And more over **we are eagerly willing to unblock you when ever you are stuck**. When you raise your hand we could see and unblock you. Use the forums for your best interest.
 
-### Small trick to write code regularly
+# Small trick to write code regularly
 
 Use this trick, when you want to work on the problems, but unable to start.
 **Set a timer for 21 mins, and simply work.** Till the timer goes off, you cannot move from the chair. Only thing you can do is think of solving the problem or write code. Nothing else. Once you start this. Till the timer goes off, simple work on the problem. At the end of 21 mins, if you feel like continuing, restart the timer for another 21 mins. Otherwise do what ever you feel like doing.
@@ -57,7 +57,7 @@ So daily if you could set timer for 21 mins and start doing it. It will lead to 
 
 This trick works for me. I am confident that this will work for you.
 
-### You are separate from your capabilities
+# You are separate from your capabilities
 
 Unfortunately we treat them as one and same. Capabilities are things which could be worked upon.
 
