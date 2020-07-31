@@ -1,7 +1,7 @@
 name: Rohini Kumar Barla
 subtitle: Education Engineer
 url: https://rohinibarla.com
-description: "Thoughts on software, programming, and life."
+description: "Thoughts on software, programming, education and life."
 permalink: /posts/:title/
 highlighter: rouge
 # Rouge Highlighter in Kramdown › http://kramdown.gettalong.org/syntax_highlighter/rouge.html
