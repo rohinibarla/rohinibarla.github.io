@@ -29,3 +29,5 @@ I will go further and say the people who designed these non-phonetic languages a
 Ok, they are not doing. What can we do? We can educate our children in the languages built over systematic and scientific and experiential observation of the effects of the sound on the person who generates it. We are so enamored by the languages which provide a better economic means. What about in the long term? What are you doing to the life that you are? How much do you care about your life?
 
 Side note, I am not using life by the popular definition that you find around on the internet. Search for Sadhguru Jaggi Vasudev and find out the definition of life. That is my reference when I say life.
+
+Today is Pournami and I am doing sadhana to experience and understand. Pournami creates a conducive environment to experience.
