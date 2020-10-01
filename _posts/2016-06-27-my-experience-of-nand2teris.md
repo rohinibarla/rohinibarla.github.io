@@ -17,6 +17,6 @@ I got excited after completing each project one after the other. Which drove me 
 
 All credit goes to [Noam Nisan](http://www.cs.huji.ac.il/~noam) and [Shimon Schocken](http://shimonschocken.com/). Thank you for designing such a course. And writing an excellent book [The Elements of Computing Systems](http://www.amazon.com/Elements-Computing-Systems-Building-Principles/dp/0262640686/ref=ed_oe_p). Coursera is a well-designed platform for learning the content of [build a computer starting with first priniciples](https://www.coursera.org/learn/build-a-computer).
 
-BTW the contents of the book are available for [free](http://www.nand2tetris.org/course.php). Check the reading column for the chapters of the book relevant to each project.
+BTW the contents of the book are available for [free](http://www.nand2tetris.org/course). Check the reading column for the chapters of the book relevant to each project.
 
 Waiting for Part 2 of the course. I don’t know If I can wait for another month. One option is to just read the book and finish the rest of the projects. And watch the course later.
