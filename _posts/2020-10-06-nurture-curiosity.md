@@ -29,7 +29,7 @@ Periodically, I will bring (since these are online classes) **developers from Am
 
 The faculty members who are teaching first-year students will identify 20 students from the second-year, who are good and interested in programming. These **senior students will act as mentors for first-year students**.
 
-We can give optional practice questions to the first-year students and those we could guide them to the next level. As more and more students in the class become comfortable in coding, the students in the class will have many people to reach out for help and guidance in understanding the subject. In the process, the whole students in the class become better at coding.
+We can give optional practice questions to the first-year students and those who solves these questions we could guide them to the next level. As more and more students in the class become comfortable in coding, the students in the class will have many people to reach out for help and guidance in understanding the subject. In the process, the whole students in the class become better at coding.
 
 We will also showcase students some of the best projects they could do **using the cutting edge technology available today**. With the convenience of the latest industry developer tools, students would step into the world software developers' ecosystem.
 
