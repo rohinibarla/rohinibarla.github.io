@@ -42,3 +42,7 @@ Exposing them to the possibilities to apply their software development skills fo
 Enhancing their perception of the systems within which we live. The decolonization of the mind is essential.
 
 To make them into **habitual coders** to keep enhancing their coding ability.
+
+## Related post:
+
+[Programming Introduction]({{ site.url }}/posts/programming-introduction)

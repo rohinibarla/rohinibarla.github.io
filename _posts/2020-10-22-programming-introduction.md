@@ -32,7 +32,7 @@ The courses available today, all are oriented towards giving a slice of the tota
 
 We will not stop after the introductory program. We will take till to a state, where he could independently create software and use technologies, which are yet to be born.
 
-[We provide](({{ site.url }}/posts/working-with-people)) the total experience of software development, starting from the introductory. Including internships and placing in companies.
+[We provide]({{ site.url }}/posts/working-with-people) the total experience of software development, starting from the introductory. Including internships and placing in companies.
 
 Because companies love students who are trained under the second person, but not under the typical first person.
 
@@ -44,3 +44,7 @@ Because companies love students who are trained under the second person, but not
 </figure>
 
 Would you like a non-swimmer to teach swimming to you children?
+
+## Related post:
+
+[Working with people]({{ site.url }}/posts/working-with-people)
