@@ -7,7 +7,13 @@ categories:
 draft: false
 ---
 
-I want to enable the higher-order bits of curiosity, commitment and clarity in young people.
+<figure>
+ <img src="{{ site.url }}/assets/truly-energetic-alive.jpg" alt="Truly energetic alive">
+ <figcaption>
+ </figcaption>
+</figure>
+
+I want to enable the higher-order bits of curiosity, commitment, clarity and enthusiasm in young people.
 
 By making him capable of self-learning and solving problems using coding and technology, he gets the confidence that his life is secure. He can earn for living with ease.
 
