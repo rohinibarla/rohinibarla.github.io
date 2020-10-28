@@ -31,7 +31,7 @@ Similarly, for Python [Think Python](https://greenteapress.com/wp/think-python/)
 
 You can start with [Intro to Programming with Karel the Dog by CodeHS](https://codehs.com/course/intro_karel/overview). Later pick any of the 2 books mentioned in the previous question. The JavaScript book from Launch School or Think Python book.
 
-You can also check the [Coding Empowerment](https://enhance42.com/programs/coding-empowerment/) program I run at Enhance42.
+You can also check the [Gateway to R&D](https://enhance42.com/programs/gateway-rnd-step-01/) program I run at Enhance42.
 
 **Can CSE cybersecurity makes the future?**
 
@@ -47,7 +47,7 @@ Online IDE's like these are also useful for writing programs and creating softwa
 
 The way you learn makes it all difficult or easy. Once you can follow a process, you can surely become comfortable with how to code. One of the books I recommend is [Think Python](https://greenteapress.com/wp/think-python-2e/). Start using the book and learn. You will find it easy.
 
-If you need the best support in learning, you can check the [Coding Empowerment](https://enhance42.com/programs/coding-empowerment/) program.
+If you need the best support in learning, you can check the [Gateway to R&D](https://enhance42.com/programs/gateway-rnd-step-01/) program.
 
 **Do extreme Maths is involved in CSE?**
 
