@@ -1,15 +1,10 @@
 ---
 layout: post
-
 title: "MINDSTORMS"
-
 date: 2020-08-03 10:10
-
-comments: false
-
+comments: true
 categories:
-
-draft: false
+draft: true
 ---
 
 # Introduction Computers for Children

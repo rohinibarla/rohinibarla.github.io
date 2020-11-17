@@ -4,7 +4,7 @@ title: "Ten Mini-Languages"
 date: 2020-08-13 08:30
 comments: false
 categories:
-draft: false
+draft: true
 ---
 
 Ten Mini-Languages:
