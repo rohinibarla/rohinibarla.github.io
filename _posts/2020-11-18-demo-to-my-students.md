@@ -4,7 +4,7 @@ title: "Demo to my students"
 date: 2020-11-18 18:20
 comments: false
 categories:
-draft: true
+draft: false
 ---
 
 We discussed about Pokiri Commitment.
