@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Demo to my students"
+title: "Sample Post: Demo to my students"
 date: 2020-11-18 18:20
 comments: false
 categories:
@@ -15,4 +15,4 @@ Becauase it's popular and available in all platforms.
 
 ## Why we need GitHub account?
 
-To write code.
+To do the course assignments.
