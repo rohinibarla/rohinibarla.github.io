@@ -1,11 +1,13 @@
 ---
 layout: post
-title: "Sample Post: One more time demo"
+title: "Gateway to Rnd: One more time demo"
 date: 2020-11-18 19:20
 comments: false
 categories:
 draft: false
 ---
+
+This post is for demo purpose as part of the class of Gateway to RnD.
 
 ## Assignment
 
@@ -26,11 +28,12 @@ git init
 Added a new file README.md using VScode
 
 We did the stadard flow of  
-git status, git add, git status, git commit, git push
+git status, git add, git status, git commit
 
 Create a repository in Github.  
+We cofigured to the remote repository.  
 We pushed our local repository.
 
-You website must be up and running.
+Your website must be up and running.
 
-e.g: cyclops331.github.io
+e.g: [cyclops331.github.io](https://cyclops331.github.io)
