@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Gateway to Rnd: One more time demo"
+title: "Gateway to RnD: One more time demo"
 date: 2020-11-18 19:20
 comments: false
 categories:
