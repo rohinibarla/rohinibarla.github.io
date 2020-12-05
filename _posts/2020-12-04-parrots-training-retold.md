@@ -24,8 +24,7 @@ The king was keen that she learn the 3Rs : reading, (w)riting, and (a)rithmetic.
  <img src="{{ site.url }}/assets/parrots-training/02.png" alt="Parrots training image-02">
 </figure>
 
-First, the teachers tried stuffing the bird with pages of knowledge from the official government textbooks. When she did not cooperate, she was prescribed Ritalin to improve her concentration and tame her
-‘hyper-activity’. Extra private tuition classes were also given and time for free play was drastically reduced. That did not work.
+First, the teachers tried stuffing the bird with pages of knowledge from the official government textbooks. When she did not cooperate, she was prescribed Ritalin to improve her concentration and tame her ‘hyper-activity’. Extra private tuition classes were also given and time for free play was drastically reduced. That did not work.
 
 Then, a UNICEF project came with all kinds of child-friendly and joyful teaching-learning materials and training programs for the teachers. A special Happy School leadership training was given to the principal. They also taught the girl-child parrot about her child rights. That did not work.
 
@@ -98,3 +97,8 @@ So, the United Nations decided to launch the ‘No Parrot Left Behind’ Campaig
 <figure>
  <img src="{{ site.url }}/assets/parrots-training/14.png" alt="Parrots training image-14">
 </figure>
+
+Note:
+This is created for comfortability of reading. Just format as webpage instead of PDF.
+
+[Original copy](http://www.shikshantar.org/initiatives/walkouts-network/parrots-training-retold)
