@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Something for Bhārat"
-date: 2021-07-27 10:10
+date: 2021-08-12 10:10
 comments: false
 categories:
 draft: false
@@ -13,7 +13,7 @@ Native speakers are looked down. We hear them in every conversation. The intelli
   
 Which is all lying without any use. What we don’t keep in use, will perish. I want to do something for my Bhārat. For the people of Bhārat.  
   
-I will do as a team with the people of Bhārat for Bhārat.  Period.  
+I will do as a team with the people of Bhārat for Bhārat. Period.  
   
 Does your heart beat the same way? Namaskaram to you. Please connect, let’s do something that brings people of Bhārat pride in their hearts and minds.  
 
