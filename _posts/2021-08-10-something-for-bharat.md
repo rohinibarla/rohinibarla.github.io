@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Something for Bhārat"
-date: 2021-08-12 10:10
+date: 2021-08-10 10:10
 comments: false
 categories:
 draft: false
