@@ -54,7 +54,7 @@ Why is -1 X -1 is 1?
 Given a bangle how do you find the center?  
 Take a thread, put it around the bangle and find the length of thread that covers the bangle, now make it into two halves of equal length threads. Use one of them and put it around the bangle, you get two points which are part of the semi-circle. Mark two pairs of such points, and draw lines for each pair of points. You get the center of the bangle.  
 Geometry and Trigonometry are completed messed up by the European minds and we trying to cast our children’s minds into that cast, and keep generating messed up minds.   
-The whole thing is about Circlometry, not about Trigonometry. Just because the European mind could not get grasp a curved line, they made everything straight lines and understood it and named it Trigonometry instead of Circlometry.  
+The whole thing is about Circlometry, not about Trigonometry. Just because the European mind could not grasp a curved line, they made everything straight lines and understood it and named it Trigonometry instead of Circlometry.  
 Being in the land of Bharat where math was invented, if we cannot teach children of Bharat the way it was invented. Which makes it simple and obvious. The genius of our children will blossom. Do we really care for our children's future? It’s questionable. What do we really care for? Just Marks, win hands down.  
 
 ## Change the question
