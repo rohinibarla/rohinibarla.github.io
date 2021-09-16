@@ -23,3 +23,6 @@ We start thinking of what really matters to us and do it.
 Here is a simple activity but huge potential. It’s almost like a trivial thing to do. The only thing needed is to have sense.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/E0MqXuryFG4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EeX7wS-6hQA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
