@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Sending to school"
+title: "Thoughts on sending to school"
 date: 2021-09-16 08:20
 comments: false
 categories:
