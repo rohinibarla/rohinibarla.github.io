@@ -4,8 +4,12 @@ title: "Ardhasiddhasana"
 date: 2021-09-17 08:20
 comments: false
 categories:
-draft: false
+draft: true
 ---
+
+Reference links for images and other things
+https://ishayogablog.wordpress.com/2017/09/14/sadhguru-on-how-to-deal-with-the-mind-during-practice/
+https://isha.sadhguru.org/yoga/yoga-articles-hatha-yoga-asanas/asanas-guide/
 
 
 Why do many gods sculptures and photos are depicted with them sitting in a specific style. Their left leg folded and right leg hanging down?
