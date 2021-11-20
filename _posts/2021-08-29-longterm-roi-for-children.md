@@ -23,3 +23,7 @@ So the saying goes like, when a child is born, plant 100 or 1000 trees as a gift
 
 Consciously or not we work towards accumulating wealth to give to our children. Let's do it consciously.
 
+## Update 20th Nov 2021
+Just came accross this video. I am just thinking, but people have already done this, here is an example.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/GvpGlwvhZiQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
