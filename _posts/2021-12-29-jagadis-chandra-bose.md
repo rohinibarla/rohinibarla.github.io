@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "India’s Great Scientist, J. C. Bose"
-date: 2020-12-04 18:20
+date: 2021-12-19 13:20
 comments: false
 categories:
 draft: false
