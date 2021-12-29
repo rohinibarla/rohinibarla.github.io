@@ -4,7 +4,7 @@ title: "Understand how children learn programming"
 date: 2021-09-29 07:20
 comments: false
 categories:
-draft: false
+draft: true
 ---
 
 bujjimeka42.com

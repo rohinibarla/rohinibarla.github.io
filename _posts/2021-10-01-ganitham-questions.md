@@ -1,3 +1,11 @@
+---
+layout: post
+title: "New posts"
+date: 2021-10-01 13:20
+comments: false
+categories:
+draft: true
+---
 
 There is sample question like.
 
