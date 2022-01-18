@@ -7,6 +7,10 @@ categories:
 draft: false
 ---
 
+Plan is a tool to fulfill the purpose.  
+  
+When you have a burning purpose in your heart, your mind will come up with dozen plans.  
+  
 Profit is not the purpose.  
 Profit is part of the plan.  
 You need profit to fulfill the purpose.  
