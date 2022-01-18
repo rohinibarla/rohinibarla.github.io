@@ -24,9 +24,9 @@ Establish a burning purpose in your heart, which you never let it cool.
 Day and night it must be burning.  
 
 <figure>
-  <img src="{{ site.url }}/assets/off-profit-and-purpose.jpg" alt="Off Profit and Purpose">
+  <img src="{{ site.url }}/assets/of-profit-and-purpose.jpg" alt="...Of Profit and Purpose">
   <figcaption>
-    Poem: Off profit and purpose
+    Poem: ...Of profit and purpose
   </figcaption>
 </figure>
   
