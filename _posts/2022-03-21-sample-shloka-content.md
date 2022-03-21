@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sample Shloka Content"
-date: 2022-03-21 06:20
+date: 2022-03-21 00:20
 comments: false
 categories:
 draft: false
