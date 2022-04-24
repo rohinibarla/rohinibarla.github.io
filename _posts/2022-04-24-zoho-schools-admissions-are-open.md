@@ -28,4 +28,7 @@ Boot Camp](https://www.zohoschools.com/gradstudies).
 
 Please let people know for whom it might be useful. And who are in the age between 20 and 24.
 
-The other best part the student get's paid while studying. Student need not pay.
+
+No fees, instead the student is paid for studying.  
+
+> Contextual, Relevant, Experiential. Way of learning.
