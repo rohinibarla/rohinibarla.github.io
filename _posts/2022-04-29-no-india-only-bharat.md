@@ -33,3 +33,14 @@ until the time.....
 "  
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/G0afm7NyNUM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Check the opening comments of Vikram Sampath as well. Our great past heros and black spots of our history. Whitewashing does not help. We need to acknowledge them and move on for a better future.
+
+"He who controls the past controls the future." - George Orawell
+
+History is a subject which gives us the identity as the nation. As an individual.
+
+Cultural subjugation of the mind, takes longer time to undo it.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5JqY0QgZEmQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
