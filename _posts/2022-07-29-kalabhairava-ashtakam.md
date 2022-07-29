@@ -14,7 +14,7 @@ draft: false
   </figcaption>
 </figure>
 
-Kalabhairava Ashtakam is one of Adi Shankaracharya’s most profound compositions, extolling the virtues of Kalabhairava – a fearsome and terrible form of Shiva. Here is the complete chant along with its lyrics and meanings. 
+Kalabhairava Ashtakam is one of Adi Shankaracharya’s most profound compositions, extolling the virtues of Kalabhairava – a fearsome and terrible form of Shiva. Here is the complete chant along with its lyrics. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sfdQwmgaS1M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -177,4 +177,5 @@ nīti mārga kovidaṃ purātanaṃ jagatpatiṃ
   
 kāśikā purādhinātha kālabhairavaṃ bhaje   
   
-[goto source](https://isha.sadhguru.org/in/en/blog/article/kalabhairava-ashtakam)
+[goto source](https://isha.sadhguru.org/in/en/blog/article/kalabhairava-ashtakam)  
+[Tool used](http://aksharamukha.appspot.com/website/)  
