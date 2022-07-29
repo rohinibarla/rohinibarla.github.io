@@ -7,6 +7,15 @@ categories:
 draft: false
 ---
 
+<figure>
+  <img src="{{ site.url }}/assets/kalabhairava-ashtakam.jpg" alt="Kalabhairava ashtakam by Adi Shankaracharya.">
+  <figcaption>
+    Kalabhairava ashtakam by Adi Shankaracharya
+  </figcaption>
+</figure>
+
+Kalabhairava Ashtakam is one of Adi Shankaracharya’s most profound compositions, extolling the virtues of Kalabhairava – a fearsome and terrible form of Shiva. Here is the complete chant along with its lyrics and meanings. 
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sfdQwmgaS1M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
