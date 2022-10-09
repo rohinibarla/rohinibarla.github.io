@@ -18,7 +18,7 @@ The best way to spend your time well is to do these activities and in the proces
   </figcaption>
 </figure>
 
-Do all the activities in the above courses: `Computer Science Fundamentals`, `Algorithm Fundamentals` and `Data Structures`. Also `Computer Memory` course. These are really the courses that you see everywhere. But a bunch of activities grouped under the name course.  
+Do all the activities in the above courses: `Computer Science Fundamentals`, `Algorithm Fundamentals` and `Data Structures`. Also `Computer Memory` course. These are not really the courses that you see everywhere. But a bunch of activities grouped under the name course.  
 
 Another is to solve all the problems in `cs50.net`, I am not saying do the course and see the video. Your goal is to solve all the problems from this course. For that if needed watch the class recordings.  
 URL: [https://cs50.harvard.edu/college](https://cs50.harvard.edu/college)  
