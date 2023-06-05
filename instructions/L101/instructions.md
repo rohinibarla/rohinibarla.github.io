@@ -8,21 +8,21 @@ Type the patterns of numbers as shown bellow in 3 files `pattern-01.txt`, `patte
 
 In file `pattern-01.txt` type
 
-![pattern-01](assets/pattern-01.png)
+![pattern-01](./assets/pattern-01.png)
 
 
 ### Pattern-02
 
 In file `pattern-02.txt` type
 
-![pattern-02](assets/pattern-02.png)
+![pattern-02](./assets/pattern-02.png)
 
 
 ### Pattern-03
 
 In file `pattern-03.txt` type  
 
-![pattern-03](assets/pattern-03.png)
+![pattern-03](./assets/pattern-03.png)
 
 ## Submit your work
 
