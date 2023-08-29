@@ -4,11 +4,16 @@ title: "Unlock the Best Talent with Zero Risk: Pay Only When You Hire!"
 date: 2023-08-15 18:20
 comments: false
 categories:
-draft: true
+draft: false
 ---
 
 Dear Startup Founder,
 
+Campus hiring is tedious, time consuming and you're never assured whether candidates will join or not. 
+That said, it's the best source for young, high energy, cost-effective talent.  
+
+I can help you! Who am I you ask?  
+  
 With a rich background at Microsoft, Veritas, Kony Labs, and co-founding Apxor, I've mastered the art of spotting exceptional tech talent.
 
 **Why Choose Me?**
