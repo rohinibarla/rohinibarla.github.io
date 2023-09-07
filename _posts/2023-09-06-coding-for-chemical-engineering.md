@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How is coding useful for chemical engineering students?"
-date: 2023-09-07 18:20
+date: 2023-09-06 18:20
 comments: false
 categories:
 draft: false
