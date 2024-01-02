@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Inner Engineering Crash Course"
-date: 2024-01-02 18:20
+date: 2024-01-02 06:20
 comments: false
 categories:
 draft: false
