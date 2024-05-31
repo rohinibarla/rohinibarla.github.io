@@ -17,7 +17,7 @@ If you take any kind of action, which produces positive result, then people say 
 
 …
 
-This is what we have done to life. That we are too much result oriented, not process oriented. If our processes are right, results will come. But because we are in such a hurry for results, we are too result oriented.
+This is what we have done to life. That we are too much result oriented, not process oriented. **If our processes are right, results will come.** But because we are in such a hurry for results, we are too result oriented.
 
 …
 
