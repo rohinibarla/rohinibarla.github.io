@@ -9,17 +9,17 @@ draft: false
 
 # Alphabet Song Albums by Sony Music Entertainment India Pvt. Ltd.
 
-| Language    | Album Title             | Artist                    | Apple Music Link                                                                  |
-|-------------|-------------------------|---------------------------|-----------------------------------------------------------------------------------|
-| **Telugu**  | Telugu Alphabet Song    | S.P. Balasubrahmanyam     | [Listen Here](https://music.apple.com/us/album/telugu-alphabet-song/1734428902)   |
-| **Tamil**   | Tamil Alphabet Song     | S.P. Balasubrahmanyam     | [Listen Here](https://music.apple.com/us/album/tamil-alphabet-song/1734432277)    |
-| **Kannada** | Kannada Alphabet Song   | S.P. Balasubrahmanyam     | [Listen Here](https://music.apple.com/us/album/kannada-alphabet-song/1734435380)  |
-| **Marathi** | Marathi Alphabet Song   | Ravindra Sathe            | [Listen Here](https://music.apple.com/us/album/marathi-alphabet-song/1734428344)  |
-| **Malayalam**| Malayalam Alphabet Song| M.G. Sreekumar            | [Listen Here](https://music.apple.com/us/album/malayalam-alphabet-song/1734428781)|
-| **Hindi**   | Hindi Alphabet Song     | Suresh Wadkar             | [Listen Here](https://music.apple.com/us/album/hindi-alphabet-song/1734432304)    |
-| **Gujarati**| Gujarati Alphabet Song  | Ashit Desai               | [Listen Here](https://music.apple.com/in/album/gujarati-alphabet-song/1734431599) |
-| **Punjabi** | Punjabi Alphabet Song   | Sonu Nigam                | [Listen Here](https://music.apple.com/us/album/punjabi-alphabet-song/1734445687)  |
-| **Bengali** | Bengali Alphabet Song   | Amit Kumar                | [Listen Here](https://music.apple.com/us/album/bengali-alphabet-song/1734429732)  |
+| Language     | Artist                    | Apple Music Link                                                                  |
+|--------------|---------------------------|-----------------------------------------------------------------------------------|
+| **Telugu**   | S.P. Balasubrahmanyam     | [Listen Here](https://music.apple.com/us/album/telugu-alphabet-song/1734428902)   |
+| **Tamil**    | S.P. Balasubrahmanyam     | [Listen Here](https://music.apple.com/us/album/tamil-alphabet-song/1734432277)    |
+| **Kannada**  | S.P. Balasubrahmanyam     | [Listen Here](https://music.apple.com/us/album/kannada-alphabet-song/1734435380)  |
+| **Marathi**  | Ravindra Sathe            | [Listen Here](https://music.apple.com/us/album/marathi-alphabet-song/1734428344)  |
+| **Malayalam**| M.G. Sreekumar            | [Listen Here](https://music.apple.com/us/album/malayalam-alphabet-song/1734428781)|
+| **Hindi**    | Suresh Wadkar             | [Listen Here](https://music.apple.com/us/album/hindi-alphabet-song/1734432304)    |
+| **Gujarati** | Ashit Desai               | [Listen Here](https://music.apple.com/in/album/gujarati-alphabet-song/1734431599) |
+| **Punjabi**  | Sonu Nigam                | [Listen Here](https://music.apple.com/us/album/punjabi-alphabet-song/1734445687)  |
+| **Bengali**  | Amit Kumar                | [Listen Here](https://music.apple.com/us/album/bengali-alphabet-song/1734429732)  |
 
 
 
@@ -38,40 +38,38 @@ draft: false
 | Bengali     | Bengali Alphabet Song   | Amit Kumar                | <iframe src="https://embed.music.apple.com/us/album/bengali-alphabet-song/1734429732" width="100%" height="150" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>  |
 
 
- <title>Alphabet Song Albums</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
-        }
-        .album {
-            margin-bottom: 40px;
-        }
-        .album-title {
-            font-size: 1.5em;
-            margin: 0 0 10px;
-        }
-        .album-artist {
-            font-size: 1.2em;
-            color: #666;
-            margin: 0 0 20px;
-        }
-        .embed-container {
-            position: relative;
-            width: 100%;
-            height: 450px;
-            border: none;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f4f4f4;
+    }
+    .album {
+        margin-bottom: 40px;
+    }
+    .album-title {
+        font-size: 1.5em;
+        margin: 0 0 10px;
+    }
+    .album-artist {
+        font-size: 1.2em;
+        color: #666;
+        margin: 0 0 20px;
+    }
+    .embed-container {
+        position: relative;
+        width: 100%;
+        height: 450px;
+        border: none;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+</style>
 
-## Telugu Alphabet Song
-### S.P. Balasubrahmanyam
+## Telugu - S.P. Balasubrahmanyam
 <iframe src="https://embed.music.apple.com/us/album/telugu-alphabet-song/1734428902" width="100%" height="150" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-
+<iframe src="https://embed.music.apple.com/us/album/telugu-alphabet-song/1734428902" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"></iframe>
 
 <!-- Telugu Alphabet Song -->
 <div class="album">
