@@ -154,10 +154,10 @@
             .attr("stroke-width", 1.5)
             .attr("stroke-dasharray", "5,5");
 
-        const yPerpendicular = svg.append("line")
-            .attr("stroke", "red")
-            .attr("stroke-width", 1.5)
-            .attr("stroke-dasharray", "5,5");
+        // const yPerpendicular = svg.append("line")
+        //     .attr("stroke", "red")
+        //     .attr("stroke-width", 1.5)
+        //     .attr("stroke-dasharray", "5,5");
 
         // Create a draggable point
         const point = svg.append("circle")
@@ -204,11 +204,11 @@
                 .attr("x2", newX)
                 .attr("y2", origin.y);
 
-            yPerpendicular
-                .attr("x1", newX)
-                .attr("y1", newY)
-                .attr("x2", origin.x)
-                .attr("y2", newY);
+            // yPerpendicular
+            //     .attr("x1", newX)
+            //     .attr("y1", newY)
+            //     .attr("x2", origin.x)
+            //     .attr("y2", newY);
 
             // Calculate angle, cos, and sin values
             let angleRad = Math.atan2(origin.y - newY, newX - origin.x);
