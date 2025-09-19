@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Why the Byte Has 8 Bits"
+title: "Why the Byte Has 8 Bits?"
 date: 2025-09-19 06:20
 comments: false
 categories:
