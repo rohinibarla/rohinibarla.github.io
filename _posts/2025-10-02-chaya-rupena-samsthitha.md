@@ -24,11 +24,11 @@ Humans need shadows until such a time as they **learn to simply exist, simply be
 
 ---
 
-While reading the article written by [Ramachandra Roddam](https://substack.com/@fragranceofshakti), I felt I heard **"Buddhi rupena samsthitha"** in [Sound of Isha](https://www.youtube.com/@soundsofisha)
+While reading the article written by [Shri Ramachandra Roddam Garu](https://substack.com/@fragranceofshakti), I felt I heard **"Buddhi rupena samsthitha"** in [Sound of Isha](https://www.youtube.com/@soundsofisha)
 
 When I searched I found a video, which is reprised yesterday, it's 7 years old and new one is reprised yesterday. Here is the link.
 
-[Ya Devi Sarva Bhuteshu | Devi Suktam | Sounds of Isha #navratri #mahalakshmi](https://www.youtube.com/watch?v=3OqX-c9s2HU)
+[Ya Devi Sarva Bhuteshu - Devi Suktam - Sounds of Isha #navratri #mahalakshmi](https://www.youtube.com/watch?v=3OqX-c9s2HU)
 
 And you can play it here itself.  
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3OqX-c9s2HU?si=vO_elUQNru1khyBN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
