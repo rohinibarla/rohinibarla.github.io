@@ -66,7 +66,8 @@ Example files to create:
 ```c
 /* hello.c */
 #include <stdio.h>
-int main(void) {
+int main(void)
+{
     printf("Hello\n");
     return 0;
 }
