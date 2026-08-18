@@ -96,6 +96,16 @@
             font-size: 10px;
             font-family: Arial, sans-serif;
         }
+        .proj-label {
+            font-size: 13px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-style: italic;
+            fill: red;
+            /* White halo keeps the text legible over the ticks and the circle */
+            stroke: white;
+            stroke-width: 3px;
+            paint-order: stroke;
+        }
         .axis-name {
             font-size: 17px;
             font-family: Georgia, "Times New Roman", serif;
@@ -317,6 +327,12 @@
             return (Math.abs(v) < 5e-4 ? 0 : v).toFixed(3);
         }
 
+        // Names for the two dashed projections. The horizontal one measures cos, the
+        // vertical one sin; each is hidden when its line is too short to caption.
+        const cosLabel = svg.append("text").attr("class", "proj-label").text("cos \u03B8");
+        const sinLabel = svg.append("text").attr("class", "proj-label").text("sin \u03B8");
+        const minLabelledLength = 45;
+
         // The angle is the only piece of state; everything on screen derives from it.
         // It is deliberately unbounded: two turns anti-clockwise reads 720 degrees,
         // and turning clockwise from the start runs negative.
@@ -398,6 +414,23 @@
                 .attr("y1", newY)
                 .attr("x2", origin.x)
                 .attr("y2", newY);
+
+            // Caption the projections, on the outer side of each dashed line
+            const cosLength = Math.abs(newX - origin.x);
+            const sinLength = Math.abs(newY - origin.y);
+
+            cosLabel
+                .attr("x", (origin.x + newX) / 2)
+                .attr("y", newY + (sinVal >= 0 ? -8 : 17))
+                .attr("text-anchor", "middle")
+                .attr("display", cosLength < minLabelledLength ? "none" : null);
+
+            sinLabel
+                .attr("x", newX + (cosVal >= 0 ? 9 : -9))
+                .attr("y", (origin.y + newY) / 2)
+                .attr("text-anchor", cosVal >= 0 ? "start" : "end")
+                .attr("dominant-baseline", "middle")
+                .attr("display", sinLength < minLabelledLength ? "none" : null);
 
             // Update information fields
             const angleDeg = angle * (180 / Math.PI);
