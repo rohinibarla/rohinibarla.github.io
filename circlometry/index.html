@@ -32,7 +32,7 @@
         }
         #info {
             flex: 0 0 auto;
-            width: 260px;
+            width: 280px;
             border: 1px solid #e3e3e6;
             border-radius: 12px;
             padding: 20px 22px;
@@ -75,6 +75,12 @@
             font-size: 18px;
             font-variant-numeric: tabular-nums;
             white-space: nowrap;
+        }
+        .pi-form {
+            margin-left: 7px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 15px;
+            color: #6b6b70;
         }
         .swatch {
             display: inline-block;
@@ -129,7 +135,7 @@
 
             <div class="reading">
                 <div class="reading-name" style="padding-left: 18px;">in radians</div>
-                <div class="reading-value"><span id="angle-rad">0.000</span></div>
+                <div class="reading-value"><span id="angle-rad">0.000</span><span class="pi-form" id="angle-pi"></span></div>
             </div>
 
             <div class="reading">
@@ -322,6 +328,33 @@
             .attr("stroke-width", 3)
             .attr("paint-order", "stroke");
 
+        // Express an angle as a multiple of PI: an exact fraction when it lands on one of
+        // the usual trig angles (within about half a degree), a decimal coefficient
+        // otherwise. Returns "" at zero, where the parenthetical adds nothing.
+        function piMultiple(a) {
+            const coefficient = a / Math.PI;
+            if (Math.abs(coefficient) < 0.003) return "";
+
+            for (const denominator of [1, 2, 3, 4, 6, 12]) {
+                const numerator = Math.round(coefficient * denominator);
+                if (numerator === 0) continue;
+                if (Math.abs(coefficient - numerator / denominator) > 0.003) continue;
+
+                const divisor = gcd(Math.abs(numerator), denominator);
+                const n = numerator / divisor;
+                const d = denominator / divisor;
+                const sign = n < 0 ? "-" : "";
+                const size = Math.abs(n) === 1 ? "" : String(Math.abs(n));
+                return d === 1 ? `${sign}${size}\u03C0` : `${sign}${size}\u03C0/${d}`;
+            }
+
+            return `${coefficient.toFixed(2)}\u03C0`;
+        }
+
+        function gcd(a, b) {
+            return b === 0 ? a : gcd(b, a % b);
+        }
+
         // Keeps a rounding artefact from printing as "-0.000"
         function format(v) {
             return (Math.abs(v) < 5e-4 ? 0 : v).toFixed(3);
@@ -436,6 +469,8 @@
             const angleDeg = angle * (180 / Math.PI);
             document.getElementById("angle").innerText = angleDeg.toFixed(1);
             document.getElementById("angle-rad").innerText = angle.toFixed(3);
+            const piForm = piMultiple(angle);
+            document.getElementById("angle-pi").innerText = piForm && `(${piForm})`;
             document.getElementById("x-val").innerText = format(cosVal);
             document.getElementById("y-val").innerText = format(sinVal);
 
