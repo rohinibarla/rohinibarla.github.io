@@ -276,12 +276,12 @@
             .attr("stroke-width", 2)
             .attr("class", "arrow");
 
-        // The angle is marked with a double arc, the usual geometric notation.
-        const arcRadii = [40, 48];
-        const angleArcs = arcRadii.map(() => svg.append("path")
+        // The angle is marked with a spiral that coils outward as the turns pile up.
+        const coil = svg.append("path")
             .attr("fill", "none")
             .attr("stroke", "green")
-            .attr("stroke-width", 2));
+            .attr("stroke-width", 2)
+            .attr("stroke-linejoin", "round");
 
         // Perpendicular lines to X and Y axes
         const xPerpendicular = svg.append("line")
@@ -312,15 +312,27 @@
             .attr("stroke-width", 3)
             .attr("paint-order", "stroke");
 
+        // Keeps a rounding artefact from printing as "-0.000"
+        function format(v) {
+            return (Math.abs(v) < 5e-4 ? 0 : v).toFixed(3);
+        }
+
         // The angle is the only piece of state; everything on screen derives from it.
+        // It is deliberately unbounded: two turns anti-clockwise reads 720 degrees,
+        // and turning clockwise from the start runs negative.
         let angle = 0;
-        let grabOffset = 0; // pointer-to-point offset held while the dot itself is dragged
+        let previousPointerAngle = 0; // raw pointer bearing at the last event
         const grabRadius = 16;
 
-        // Angle of (x, y) as seen from the origin, normalised to [0, 2*PI)
-        function angleAt(x, y) {
-            const a = Math.atan2(origin.y - y, x - origin.x);
-            return a < 0 ? a + TAU : a;
+        // Bearing of (x, y) from the origin, in (-PI, PI]
+        function pointerAngle(x, y) {
+            return Math.atan2(origin.y - y, x - origin.x);
+        }
+
+        // Fold a difference of bearings into (-PI, PI] so a sweep past the seam
+        // at due west counts as a small step, not a whole turn backwards.
+        function shortestTurn(delta) {
+            return delta - TAU * Math.round(delta / TAU);
         }
 
         function dragStarted(event) {
@@ -328,14 +340,22 @@
             const py = origin.y - radius * Math.sin(angle);
             const grabbedDot = Math.hypot(event.x - px, event.y - py) <= grabRadius;
 
-            // Grabbing the dot keeps the pointer's offset from it, so it does not
-            // jump to the cursor. Pressing anywhere else does move the point there.
-            grabOffset = grabbedDot ? angleAt(event.x, event.y) - angle : 0;
-            dragged(event);
+            previousPointerAngle = pointerAngle(event.x, event.y);
+
+            // Grabbing the dot picks it up where it is, so it does not jump to the
+            // cursor. Pressing anywhere else moves the point there the short way round.
+            if (!grabbedDot) {
+                setAngle(angle + shortestTurn(previousPointerAngle - angle));
+            }
         }
 
+        // Accumulate how far the pointer swept rather than reading its bearing
+        // directly, so the count keeps climbing past 360 and falling below 0.
         function dragged(event) {
-            setAngle(angleAt(event.x, event.y) - grabOffset);
+            const current = pointerAngle(event.x, event.y);
+            const swept = shortestTurn(current - previousPointerAngle);
+            previousPointerAngle = current;
+            setAngle(angle + swept);
         }
 
         // container() must be the svg itself: d3 defaults to this.parentNode, which would
@@ -347,7 +367,7 @@
 
         // Place the point at the given angle and redraw everything.
         function setAngle(a) {
-            angle = ((a % TAU) + TAU) % TAU;
+            angle = a;
 
             const cosVal = Math.cos(angle);
             const sinVal = Math.sin(angle);
@@ -383,29 +403,44 @@
             const angleDeg = angle * (180 / Math.PI);
             document.getElementById("angle").innerText = angleDeg.toFixed(1);
             document.getElementById("angle-rad").innerText = angle.toFixed(3);
-            document.getElementById("x-val").innerText = cosVal.toFixed(3);
-            document.getElementById("y-val").innerText = sinVal.toFixed(3);
+            document.getElementById("x-val").innerText = format(cosVal);
+            document.getElementById("y-val").innerText = format(sinVal);
 
-            // Draw the angle arcs. d3.arc measures clockwise from 12 o'clock, so starting
-            // at PI/2 puts us on the +X axis and subtracting sweeps anti-clockwise.
-            angleArcs.forEach((arc, i) => {
-                const anglePath = d3.arc()
-                    .innerRadius(arcRadii[i])
-                    .outerRadius(arcRadii[i])
-                    .startAngle(Math.PI / 2)
-                    .endAngle(Math.PI / 2 - angle);
-
-                arc.attr("d", anglePath())
-                    .attr("transform", `translate(${origin.x},${origin.y})`);
-            });
-
-            // Put the reading just outside the arcs, on the bisector of the swept angle.
-            const labelRadius = arcRadii[arcRadii.length - 1] + 22;
-            const bisector = angle / 2;
+            // Draw the coil and put the reading just past its outer end.
+            const tipRadius = drawCoil();
+            const trailing = angle - (angle < 0 ? -1 : 1) * 0.3;
             angleLabel
-                .attr("x", origin.x + labelRadius * Math.cos(bisector))
-                .attr("y", origin.y - labelRadius * Math.sin(bisector))
+                .attr("x", origin.x + (tipRadius + 16) * Math.cos(trailing))
+                .attr("y", origin.y - (tipRadius + 16) * Math.sin(trailing))
                 .text(`${angleDeg.toFixed(1)}°`);
+        }
+
+        // An Archimedean spiral from 0 to the current angle: one loop per turn, growing
+        // outward. Per-turn growth shrinks once there are enough turns to reach the
+        // outer limit, so a long spin tightens the coil instead of overrunning the circle.
+        const coilStartRadius = 20;   // 0.1 on the axes
+        const coilMaxRadius = 165;
+        const coilGrowthPerTurn = 18;
+
+        // Returns the radius the coil reaches at its outer end.
+        function drawCoil() {
+            const turns = Math.abs(angle) / TAU;
+            const growth = turns > 0
+                ? Math.min(coilGrowthPerTurn, (coilMaxRadius - coilStartRadius) / turns)
+                : coilGrowthPerTurn;
+            const radiusAt = (t) => coilStartRadius + growth * Math.abs(t) / TAU;
+
+            // Sample about every 2 degrees; d3.lineRadial measures clockwise from
+            // 12 o'clock, hence the PI/2 - t.
+            const steps = Math.max(2, Math.ceil(Math.abs(angle) / (Math.PI / 90)));
+            const spiral = d3.lineRadial()
+                .angle((t) => Math.PI / 2 - t)
+                .radius(radiusAt);
+
+            coil.attr("d", spiral(d3.range(steps + 1).map((i) => angle * i / steps)))
+                .attr("transform", `translate(${origin.x},${origin.y})`);
+
+            return radiusAt(angle);
         }
 
         // Start at 0 degrees, drawn by the same code path as every later update.
