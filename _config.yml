@@ -63,3 +63,5 @@ manifest:
   lang: en
   background_color: #ffffff
   display: standalone
+
+timezone: 'Asia/Kolkata'

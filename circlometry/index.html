@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Circle Diagram</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+            color: #1c1c1e;
+        }
+        #container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            padding: 24px;
+        }
+        #diagram {
+            flex: 0 1 600px;
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            touch-action: none; /* let drag work on touch devices */
+            cursor: crosshair;
+        }
+        #point {
+            cursor: grab;
+        }
+        #info {
+            flex: 0 0 auto;
+            width: 280px;
+            border: 1px solid #e3e3e6;
+            border-radius: 12px;
+            padding: 20px 22px;
+            background: #fbfbfc;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        #info h2 {
+            margin: 0 0 4px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #6b6b70;
+        }
+        .reading {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #ececf0;
+        }
+        .reading:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .reading-name {
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .reading-note {
+            display: block;
+            margin-top: 2px;
+            font-size: 12px;
+            font-weight: 400;
+            color: #8a8a8f;
+        }
+        .reading-value {
+            font-family: "SF Mono", Menlo, Consolas, monospace;
+            font-size: 18px;
+            font-variant-numeric: tabular-nums;
+            white-space: nowrap;
+        }
+        .pi-form {
+            margin-left: 7px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 15px;
+            color: #6b6b70;
+        }
+        .swatch {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-right: 8px;
+            border-radius: 2px;
+            vertical-align: baseline;
+        }
+        .swatch-angle { background: green; }
+        .swatch-proj  { background: red; }
+        .arrow {
+            marker-end: url(#arrow);
+        }
+        .axis-line {
+            marker-end: url(#axis-arrow);
+        }
+        .tick-label {
+            font-size: 10px;
+            font-family: Arial, sans-serif;
+        }
+        .proj-label {
+            font-size: 13px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-style: italic;
+            fill: red;
+            /* White halo keeps the text legible over the ticks and the circle */
+            stroke: white;
+            stroke-width: 3px;
+            paint-order: stroke;
+        }
+        .axis-name {
+            font-size: 17px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-style: italic;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <svg id="diagram" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid meet"
+             role="img" aria-label="Unit circle with a draggable point showing angle, cosine and sine"></svg>
+
+        <aside id="info">
+            <h2>Readings</h2>
+
+            <div class="reading">
+                <div class="reading-name"><span class="swatch swatch-angle"></span>Angle&nbsp;&theta;</div>
+                <div class="reading-value"><span id="angle">0.0</span>&deg;</div>
+            </div>
+
+            <div class="reading">
+                <div class="reading-name" style="padding-left: 18px;">in radians</div>
+                <div class="reading-value"><span id="angle-rad">0.000</span><span class="pi-form" id="angle-pi"></span></div>
+            </div>
+
+            <div class="reading">
+                <div class="reading-name">
+                    <span class="swatch swatch-proj"></span>cos&nbsp;&theta;
+                    <span class="reading-note">projection on X-axis</span>
+                </div>
+                <div class="reading-value" id="x-val">1.000</div>
+            </div>
+
+            <div class="reading">
+                <div class="reading-name">
+                    <span class="swatch swatch-proj"></span>sin&nbsp;&theta;
+                    <span class="reading-note">projection on Y-axis</span>
+                </div>
+                <div class="reading-value" id="y-val">0.000</div>
+            </div>
+        </aside>
+    </div>
+
+    <script>
+        const width = 600, height = 600;
+        const radius = 200;
+        const origin = {x: width / 2, y: height / 2};
+        const TAU = 2 * Math.PI;
+
+        const svg = d3.select("#diagram");
+        const defs = svg.append("defs");
+
+        // Arrowhead for the radius vector
+        defs.append("marker")
+            .attr("id", "arrow")
+            .attr("viewBox", "0 0 10 10")
+            .attr("refX", "5")
+            .attr("refY", "5")
+            .attr("markerWidth", "6")
+            .attr("markerHeight", "6")
+            .attr("orient", "auto")
+            .append("path")
+            .attr("d", "M 0 0 L 10 5 L 0 10 Z")
+            .attr("fill", "gray");
+
+        // Arrowhead for the axes themselves
+        defs.append("marker")
+            .attr("id", "axis-arrow")
+            .attr("viewBox", "0 0 10 10")
+            .attr("refX", "8")
+            .attr("refY", "5")
+            .attr("markerWidth", "5")
+            .attr("markerHeight", "5")
+            .attr("orient", "auto")
+            .append("path")
+            .attr("d", "M 0 0 L 10 5 L 0 10 Z")
+            .attr("fill", "black");
+
+        // Y-axis, drawn bottom-to-top so the arrowhead lands on the positive end
+        svg.append("line")
+            .attr("class", "axis-line")
+            .attr("x1", origin.x)
+            .attr("y1", height)
+            .attr("x2", origin.x)
+            .attr("y2", 6)
+            .attr("stroke", "black")
+            .attr("stroke-width", 2);
+
+        // X-axis, drawn left-to-right for the same reason
+        svg.append("line")
+            .attr("class", "axis-line")
+            .attr("x1", 0)
+            .attr("y1", origin.y)
+            .attr("x2", width - 6)
+            .attr("y2", origin.y)
+            .attr("stroke", "black")
+            .attr("stroke-width", 2);
+
+        // Name the axes and the origin
+        svg.append("text")
+            .attr("class", "axis-name")
+            .attr("x", width - 16)
+            .attr("y", origin.y - 14)
+            .attr("text-anchor", "end")
+            .text("X");
+
+        svg.append("text")
+            .attr("class", "axis-name")
+            .attr("x", origin.x + 14)
+            .attr("y", 20)
+            .text("Y");
+
+        svg.append("text")
+            .attr("class", "axis-name")
+            .attr("x", origin.x - 12)
+            .attr("y", origin.y - 10)
+            .attr("text-anchor", "end")
+            .text("O");
+
+        // Add markers for X and Y axes with labels.
+        // Ticks every 0.1 units, but label every other one so the text does not crowd.
+        const tickStep = 20;   // pixels between ticks (0.1 units)
+        const labelEvery = 2;  // label every 2nd tick (0.2 units)
+
+        for (let i = -radius; i <= radius; i += tickStep) {
+            if (i === 0) continue;
+            const labeled = (i / tickStep) % labelEvery === 0;
+
+            // Draw ticks on X-axis
+            svg.append("line")
+                .attr("x1", origin.x + i)
+                .attr("y1", origin.y - 5)
+                .attr("x2", origin.x + i)
+                .attr("y2", origin.y + 5)
+                .attr("stroke", "black");
+
+            // Add labels on X-axis (always below the axis)
+            if (labeled) {
+                svg.append("text")
+                    .attr("class", "tick-label")
+                    .attr("x", origin.x + i)
+                    .attr("y", origin.y + 18)
+                    .attr("text-anchor", "middle")
+                    .text((i / radius).toFixed(1));
+            }
+
+            // Draw ticks on Y-axis
+            svg.append("line")
+                .attr("x1", origin.x - 5)
+                .attr("y1", origin.y + i)
+                .attr("x2", origin.x + 5)
+                .attr("y2", origin.y + i)
+                .attr("stroke", "black");
+
+            // Add labels on Y-axis (always left of the axis)
+            if (labeled) {
+                svg.append("text")
+                    .attr("class", "tick-label")
+                    .attr("x", origin.x - 10)
+                    .attr("y", origin.y + i + 4)
+                    .attr("text-anchor", "end")
+                    .text((-i / radius).toFixed(1));
+            }
+        }
+
+        // Draw circle
+        svg.append("circle")
+            .attr("cx", origin.x)
+            .attr("cy", origin.y)
+            .attr("r", radius)
+            .attr("stroke", "blue")
+            .attr("fill", "none")
+            .attr("stroke-width", 2);
+
+        const arrowLine = svg.append("line")
+            .attr("stroke", "gray")
+            .attr("stroke-width", 2)
+            .attr("class", "arrow");
+
+        // The angle is marked with a spiral that coils outward as the turns pile up.
+        const coil = svg.append("path")
+            .attr("fill", "none")
+            .attr("stroke", "green")
+            .attr("stroke-width", 2)
+            .attr("stroke-linejoin", "round");
+
+        // Perpendicular lines to X and Y axes
+        const xPerpendicular = svg.append("line")
+            .attr("stroke", "red")
+            .attr("stroke-width", 1.5)
+            .attr("stroke-dasharray", "5,5");
+
+        const yPerpendicular = svg.append("line")
+            .attr("stroke", "red")
+            .attr("stroke-width", 1.5)
+            .attr("stroke-dasharray", "5,5");
+
+        // The draggable point
+        const point = svg.append("circle")
+            .attr("id", "point")
+            .attr("r", 8)
+            .attr("fill", "red");
+
+        // Angle readout sitting next to the arc
+        const angleLabel = svg.append("text")
+            .attr("fill", "green")
+            .attr("font-size", "14px")
+            .attr("font-family", "Arial, sans-serif")
+            .attr("text-anchor", "middle")
+            .attr("dominant-baseline", "middle")
+            // White halo keeps the reading legible over ticks and dashed lines
+            .attr("stroke", "white")
+            .attr("stroke-width", 3)
+            .attr("paint-order", "stroke");
+
+        // Express an angle as a multiple of PI: an exact fraction when it lands on one of
+        // the usual trig angles (within about half a degree), a decimal coefficient
+        // otherwise. Returns "" at zero, where the parenthetical adds nothing.
+        function piMultiple(a) {
+            const coefficient = a / Math.PI;
+            if (Math.abs(coefficient) < 0.003) return "";
+
+            for (const denominator of [1, 2, 3, 4, 6, 12]) {
+                const numerator = Math.round(coefficient * denominator);
+                if (numerator === 0) continue;
+                if (Math.abs(coefficient - numerator / denominator) > 0.003) continue;
+
+                const divisor = gcd(Math.abs(numerator), denominator);
+                const n = numerator / divisor;
+                const d = denominator / divisor;
+                const sign = n < 0 ? "-" : "";
+                const size = Math.abs(n) === 1 ? "" : String(Math.abs(n));
+                return d === 1 ? `${sign}${size}\u03C0` : `${sign}${size}\u03C0/${d}`;
+            }
+
+            return `${coefficient.toFixed(2)}\u03C0`;
+        }
+
+        function gcd(a, b) {
+            return b === 0 ? a : gcd(b, a % b);
+        }
+
+        // Keeps a rounding artefact from printing as "-0.000"
+        function format(v) {
+            return (Math.abs(v) < 5e-4 ? 0 : v).toFixed(3);
+        }
+
+        // Names for the two dashed projections. The horizontal one measures cos, the
+        // vertical one sin; each is hidden when its line is too short to caption.
+        const cosLabel = svg.append("text").attr("class", "proj-label").text("cos \u03B8");
+        const sinLabel = svg.append("text").attr("class", "proj-label").text("sin \u03B8");
+        const minLabelledLength = 45;
+
+        // The angle is the only piece of state; everything on screen derives from it.
+        // It is deliberately unbounded: two turns anti-clockwise reads 720 degrees,
+        // and turning clockwise from the start runs negative.
+        let angle = 0;
+        let previousPointerAngle = 0; // raw pointer bearing at the last event
+        const grabRadius = 16;
+
+        // Bearing of (x, y) from the origin, in (-PI, PI]
+        function pointerAngle(x, y) {
+            return Math.atan2(origin.y - y, x - origin.x);
+        }
+
+        // Fold a difference of bearings into (-PI, PI] so a sweep past the seam
+        // at due west counts as a small step, not a whole turn backwards.
+        function shortestTurn(delta) {
+            return delta - TAU * Math.round(delta / TAU);
+        }
+
+        function dragStarted(event) {
+            const px = origin.x + radius * Math.cos(angle);
+            const py = origin.y - radius * Math.sin(angle);
+            const grabbedDot = Math.hypot(event.x - px, event.y - py) <= grabRadius;
+
+            previousPointerAngle = pointerAngle(event.x, event.y);
+
+            // Grabbing the dot picks it up where it is, so it does not jump to the
+            // cursor. Pressing anywhere else moves the point there the short way round.
+            if (!grabbedDot) {
+                setAngle(angle + shortestTurn(previousPointerAngle - angle));
+            }
+        }
+
+        // Accumulate how far the pointer swept rather than reading its bearing
+        // directly, so the count keeps climbing past 360 and falling below 0.
+        function dragged(event) {
+            const current = pointerAngle(event.x, event.y);
+            const swept = shortestTurn(current - previousPointerAngle);
+            previousPointerAngle = current;
+            setAngle(angle + swept);
+        }
+
+        // container() must be the svg itself: d3 defaults to this.parentNode, which would
+        // report pointer positions in the wrapper div's pixels instead of viewBox units.
+        svg.call(d3.drag()
+            .container(function () { return this; })
+            .on("start", dragStarted)
+            .on("drag", dragged));
+
+        // Place the point at the given angle and redraw everything.
+        function setAngle(a) {
+            angle = a;
+
+            const cosVal = Math.cos(angle);
+            const sinVal = Math.sin(angle);
+
+            // SVG y grows downward, hence the minus on the sine term
+            const newX = origin.x + radius * cosVal;
+            const newY = origin.y - radius * sinVal;
+
+            point.attr("cx", newX).attr("cy", newY);
+
+            // Update arrow line (a bit longer than the radius, so the head clears the circle)
+            const arrowLengthFactor = 1.4;
+            arrowLine
+                .attr("x1", origin.x)
+                .attr("y1", origin.y)
+                .attr("x2", origin.x + (newX - origin.x) * arrowLengthFactor)
+                .attr("y2", origin.y + (newY - origin.y) * arrowLengthFactor);
+
+            // Update perpendicular lines
+            xPerpendicular
+                .attr("x1", newX)
+                .attr("y1", newY)
+                .attr("x2", newX)
+                .attr("y2", origin.y);
+
+            yPerpendicular
+                .attr("x1", newX)
+                .attr("y1", newY)
+                .attr("x2", origin.x)
+                .attr("y2", newY);
+
+            // Caption the projections, on the outer side of each dashed line
+            const cosLength = Math.abs(newX - origin.x);
+            const sinLength = Math.abs(newY - origin.y);
+
+            cosLabel
+                .attr("x", (origin.x + newX) / 2)
+                .attr("y", newY + (sinVal >= 0 ? -8 : 17))
+                .attr("text-anchor", "middle")
+                .attr("display", cosLength < minLabelledLength ? "none" : null);
+
+            sinLabel
+                .attr("x", newX + (cosVal >= 0 ? 9 : -9))
+                .attr("y", (origin.y + newY) / 2)
+                .attr("text-anchor", cosVal >= 0 ? "start" : "end")
+                .attr("dominant-baseline", "middle")
+                .attr("display", sinLength < minLabelledLength ? "none" : null);
+
+            // Update information fields
+            const angleDeg = angle * (180 / Math.PI);
+            document.getElementById("angle").innerText = angleDeg.toFixed(1);
+            document.getElementById("angle-rad").innerText = angle.toFixed(3);
+            const piForm = piMultiple(angle);
+            document.getElementById("angle-pi").innerText = piForm && `(${piForm})`;
+            document.getElementById("x-val").innerText = format(cosVal);
+            document.getElementById("y-val").innerText = format(sinVal);
+
+            // Draw the coil and put the reading just past its outer end.
+            const tipRadius = drawCoil();
+            const trailing = angle - (angle < 0 ? -1 : 1) * 0.3;
+            angleLabel
+                .attr("x", origin.x + (tipRadius + 16) * Math.cos(trailing))
+                .attr("y", origin.y - (tipRadius + 16) * Math.sin(trailing))
+                .text(`${angleDeg.toFixed(1)}°`);
+        }
+
+        // An Archimedean spiral from 0 to the current angle: one loop per turn, growing
+        // outward. Per-turn growth shrinks once there are enough turns to reach the
+        // outer limit, so a long spin tightens the coil instead of overrunning the circle.
+        const coilStartRadius = 20;   // 0.1 on the axes
+        const coilMaxRadius = 165;
+        const coilGrowthPerTurn = 18;
+
+        // Returns the radius the coil reaches at its outer end.
+        function drawCoil() {
+            const turns = Math.abs(angle) / TAU;
+            const growth = turns > 0
+                ? Math.min(coilGrowthPerTurn, (coilMaxRadius - coilStartRadius) / turns)
+                : coilGrowthPerTurn;
+            const radiusAt = (t) => coilStartRadius + growth * Math.abs(t) / TAU;
+
+            // Sample about every 2 degrees; d3.lineRadial measures clockwise from
+            // 12 o'clock, hence the PI/2 - t.
+            const steps = Math.max(2, Math.ceil(Math.abs(angle) / (Math.PI / 90)));
+            const spiral = d3.lineRadial()
+                .angle((t) => Math.PI / 2 - t)
+                .radius(radiusAt);
+
+            coil.attr("d", spiral(d3.range(steps + 1).map((i) => angle * i / steps)))
+                .attr("transform", `translate(${origin.x},${origin.y})`);
+
+            return radiusAt(angle);
+        }
+
+        // Start at 0 degrees, drawn by the same code path as every later update.
+        setAngle(0);
+    </script>
+</body>
+</html>
